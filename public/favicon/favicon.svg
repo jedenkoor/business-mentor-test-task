@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="48" height="48"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_2236_34972)">
+    <rect width="48" height="48" rx="12" fill="#8179FF"></rect>
+    <g filter="url(#filter0_f_2236_34972)">
+      <circle cx="24" cy="24" r="16" fill="#554CE9"></circle>
+    </g>
+    <path d="M20.6045 13.1367C20.6045 11.4044 22.0088 10 23.7412 10H27.7025C29.4348 10 30.8392 11.4043 30.8392 13.1367V19.8196H20.6045V13.1367Z" fill="white" fill-opacity="0.5"></path>
+    <path d="M13 24.0517C13 23.3188 13.5941 22.7246 14.3271 22.7246H31.8633C33.5957 22.7246 35 24.129 35 25.8613V28.8207H13V24.0517Z" fill="white" fill-opacity="0.5"></path>
+    <path d="M13 22.7664L13 28.8195H21.8022C26.7931 28.8195 30.8389 24.7737 30.8389 19.7828V12.1562C30.0902 16.4755 26.3422 19.6297 21.9585 19.6297H16.1367C14.4044 19.6297 13 21.034 13 22.7664Z" fill="#EFEEFF"></path>
+    <path d="M13.001 28.8101L13.001 34.8632C13.001 36.5956 14.4053 38 16.1377 38L25.9626 38C30.9534 37.9999 34.9993 33.9541 34.9993 28.9632V24.9727C34.225 27.2661 32.0741 28.8101 29.6535 28.8101L13.001 28.8101Z" fill="white"></path>
+  </g>
+  <defs>
+    <filter id="SvgjsFilter1009" x="-16" y="-16" width="80" height="80" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+      <feGaussianBlur stdDeviation="12" result="effect1_foregroundBlur_2236_34972"></feGaussianBlur>
+    </filter>
+    <clipPath id="SvgjsClipPath1008">
+      <rect width="48" height="48" rx="12" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

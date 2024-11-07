@@ -1,0 +1,67 @@
+.tariffs {
+  padding: 4.8rem 0;
+  @include respond-to($l) {
+    padding: 3.2rem 0;
+  }
+  @include respond-to($pb) {
+    padding: 2.4rem 0;
+  }
+  &__text {
+    margin-bottom: 2.4rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--grey-50);
+    text-transform: uppercase;
+    @include respond-to($l) {
+      margin-bottom: 1.6rem;
+    }
+    @include respond-to($ts) {
+      margin-bottom: 1.2rem;
+    }
+    @include respond-to($pb) {
+      font-size: 1.4rem;
+    }
+
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 4.8rem;
+    text-align: center;
+    font-size: 5.6rem;
+    font-weight: 600;
+    line-height: 1;
+    @include respond-to($l) {
+      font-size: 4.8rem;
+    }
+    @include respond-to($ts) {
+      margin-bottom: 4rem;
+    }
+    @include respond-to($pb) {
+      margin-bottom: 3.2rem;
+      font-size: 3.2rem;
+      line-height: 1.2;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.4rem;
+    list-style: none;
+    @include respond-to($ts) {
+      grid-template-columns: auto;
+      grid-gap: 1.2rem;
+    }
+  }
+  &__item {
+    &--best {
+      @include respond-to($ts) {
+        order: -2;
+      }
+    }
+    &--timer {
+      @include respond-to($ts) {
+        order: -1;
+      }
+    }
+  }
+}

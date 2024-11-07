@@ -1,0 +1,466 @@
+.tariff {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.2rem 1.2rem 2rem;
+  background: var(--white-100);
+  border-radius: 2.4rem;
+  @include respond-to($l) {
+    padding-top: 2.4rem;
+    padding-bottom: 3.3rem;
+  }
+  @media screen and (min-width: 700px) {
+    @include respond-to($ts) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 4rem;
+      padding: 1.2rem 1.2rem 1.2rem 2.4rem;
+    }
+  }
+  @include respond-to($pb) {
+    padding: 2.4rem;
+  }
+  &--best {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      z-index: -1;
+    }
+    &:before {
+      top: -0.4rem;
+      left: -0.4rem;
+      width: calc(100% + 0.8rem);
+      height: calc(100% + 0.8rem);
+      background: linear-gradient(0, #E0B330 0%, #FBEE88 51%, #E0B330 100%);
+      border-radius: 2.6rem;
+    }
+    &:after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--white-100);
+      border-radius: 2.4rem;
+    }
+    .tariff {
+      &__icon {
+        box-shadow: inset 0 0 0 1rem #F5CE5B;
+        @include respond-to($ts) {
+          box-shadow: inset 0 0 0 0.8rem #F5CE5B;
+        }
+        &:after {
+          background: linear-gradient(0, var(--white-100) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+      }
+      &__block {
+        background: url('/tariff/best-bg.svg') center/cover no-repeat;
+        @media screen and (min-width: 700px) {
+          @include respond-to($ts) {
+            background-image: url('/tariff/best-bg-tablet.svg');
+          }
+        }
+      }
+      &__price,
+      &__subprice {
+        color: var(--white-100);
+      }
+      &__guarantee {
+        background: url('/tariff/guarantee-best.jpg') center/cover no-repeat;
+        @media screen and (min-width: 700px) {
+          @include respond-to($l) {
+            background-image: url('/tariff/guarantee-best-tablet.jpg');
+          }
+        }
+      }
+    }
+  }
+  &__timer {
+    position: absolute;
+    top: 1.6rem;
+    left: 1.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.8rem;
+    border-radius: 2rem;
+    background: var(--red-20);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--red-100);
+    @include respond-to($ts) {
+      z-index: 2;
+    }
+    @include respond-to($pb) {
+      padding: 0.45rem 0.57rem;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+    svg {
+      width: 1.6rem;
+      height: auto;
+      margin-top: -0.2rem;
+      margin-right: 0.4rem;
+      @include respond-to($pb) {
+        width: 1.1rem;
+        margin-right: 0.26rem;
+        margin-top: 0;
+      }
+    }
+    span {
+      width: 6.2rem;
+      @include respond-to($pb) {
+        width: 5.2rem;
+      }
+    }
+  }
+  &__best {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.6rem 1.2rem;
+    border-radius: 1.6rem 1.6rem 0 0;
+    background: linear-gradient(180deg, #FFF289 0%, #D2A41D 100%), #FFF;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white-100);
+    @media screen and (min-width: 700px) {
+      @include respond-to($ts) {
+        left: 2.4rem;
+        transform: none;
+      }
+    }
+    @include respond-to($pb) {
+      padding: 0.6rem 1rem;
+      border-radius: 1.2rem 1.2rem 0 0;
+      font-size: 1.2rem;
+    }
+  }
+  &__icon {
+    position: relative;
+    display: flex;
+    margin-bottom: 2rem;
+    padding: 2.4rem;
+    box-shadow: inset 0 0 0 1rem #F3F7FB;
+    border-radius: 50%;
+    @media screen and (min-width: 1024px) {
+      @include respond-to($l) {
+        margin-bottom: 1.6rem;
+      }
+    }
+    @include respond-to($ts) {
+      padding: 2rem;
+      box-shadow: inset 0 0 0 0.8rem #F3F7FB;
+    }
+    @include respond-to($pb) {
+      margin-bottom: 1.6rem;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0, var(--white-100) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    svg {
+      position: relative;
+      z-index: 2;
+      width: 3.2rem;
+      height: auto;
+      @include respond-to($l) {
+        width: 2.4rem;
+      }
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    @include respond-to($l) {
+      font-size: 2.4rem;
+    }
+    @include respond-to($pb) {
+      margin-bottom: 0.4rem;
+      font-size: 2rem;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 2.4rem;
+    text-align: center;
+    color: var(--grey-100);
+    @include respond-to($ts) {
+      margin-bottom: 2rem;
+    }
+    @include respond-to($pb) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  &__wrap {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    @include respond-to($ts) {
+      position: relative;
+      z-index: initial;
+      height: 100%;
+    }
+    @include respond-to($pb) {
+      position: static;
+    }
+    &--left {
+      @media screen and (min-width: 700px) {
+        @include respond-to($ts) {
+          align-items: flex-start;
+          padding: 1.2rem 0 0.7rem;
+        }
+      }
+    }
+  }
+  &__block {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    padding: 3.2rem 2.4rem 2.4rem;
+    border-radius: 2rem;
+    background: var(--Card-Background);
+    overflow: hidden;
+    @include respond-to($l) {
+      padding: 2.4rem 1.6rem 1.6rem;
+    }
+    @media screen and (min-width: 700px) {
+      @include respond-to($ts) {
+        height: 29.3rem;
+        flex: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.6rem;
+      }
+    }
+    @include respond-to($pb) {
+      padding: 2rem 1.6rem 1.6rem;
+      border-radius: 1.6rem;
+    }
+  }
+  &__price {
+    margin-bottom: 0.8rem;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    @include respond-to($l) {
+      margin-bottom: 0.4rem;
+      font-size: 3.2rem;
+      font-weight: 600;
+    }
+    @include respond-to($ts) {
+      margin-top: auto;
+    }
+    @include respond-to($pb) {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+  }
+  &__subprice {
+    margin-bottom: 2.4rem;
+    text-align: center;
+    line-height: 1;
+    color: var(--grey-100);
+    @include respond-to($l) {
+      line-height: 1.4;
+    }
+    @include respond-to($ts) {
+      margin-bottom: 0;
+    }
+    @include respond-to($pb) {
+      margin-bottom: 1.6rem;
+      color: #111215;
+    }
+  }
+  &__btn {
+    width: 100%;
+    height: 6.4rem;
+    border-radius: 1.6rem;
+    background-color: var(--black-100);
+    color: var(--white-100);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: background-color 0.2s;
+    @include hover {
+      &:hover {
+        background-color: #595959;
+      }
+    }
+    @include active {
+      &:active {
+        background-color: #595959;
+      }
+    }
+    @include respond-to($l) {
+      height: 6rem;
+    }
+    @include respond-to($ts) {
+      margin-top: auto;
+    }
+    @include respond-to($pb) {
+      height: 4.8rem;
+      border-radius: 1.2rem;
+    }
+    &[disabled] {
+      background-color: #595959;
+      pointer-events: none;
+    }
+  }
+  &__guarantee {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: 7.2rem;
+    display: flex;
+    margin-top: 0.8rem;
+    border-radius: 1.6rem;
+    background: url('/tariff/guarantee.jpg') center/cover no-repeat;
+    @media screen and (min-width: 700px) {
+      @include respond-to($l) {
+        background-image: url('/tariff/guarantee-tablet.jpg');
+      }
+    }
+    @include respond-to($pb) {
+      height: 5.2rem;
+      margin-top: 0.4rem;
+      border-radius: 1.2rem;
+    }
+  }
+  &__tooltip {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.1rem;
+    @include respond-to($pb) {
+      right: 0.7rem;
+    }
+  }
+  &-tooltip {
+    &__toggle {
+      display: flex;
+      padding: 0.5rem;
+      &:hover + .tariff-tooltip__text,
+      &:focus + .tariff-tooltip__text {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.2s, visibility 0.2s 0s;
+      }
+      svg {
+        width: 2rem;
+        height: auto;
+        @include respond-to($pb) {
+          width: 1.4rem;
+        }
+      }
+    }
+    &__text {
+      position: absolute;
+      top: calc(100% + 0.7rem);
+      right: -0.9rem;
+      width: 30.2rem;
+      padding: 0.8rem 1.2rem;
+      border-radius: 1rem;
+      background: var(--black-100);
+      color: var(--white-100);
+      font-size: 1.4rem;
+      font-weight: 500;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0s 0.2s;
+      @include respond-to($pb) {
+        width: calc(100vw - 7rem);
+        max-width: 30.2rem;
+        right: -1.3rem;
+        font-size: 1.2rem;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 1.4rem;
+        top: -1.7rem;
+        border: 1rem solid transparent;
+        border-radius: 0.4rem;
+        border-bottom-color: var(--black-100);
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    margin-top: 2.4rem;
+    padding: 0 2rem;
+    list-style: none;
+    @include respond-to($l) {
+      padding: 0 1.2rem;
+    }
+    @media screen and (min-width: 700px) {
+      @include respond-to($ts) {
+        display: none;
+        margin-top: 0;
+        padding: 0;
+      }
+    }
+    @include respond-to($pb) {
+      margin-top: 1.6rem;
+      padding: 0;
+    }
+    &--tablet {
+      display: none;
+      @media screen and (min-width: 700px) {
+        @include respond-to($ts) {
+          display: block;
+        }
+      }
+    }
+  }
+  &-list {
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      @include respond-to($l) {
+        line-height: 1.44;
+      }
+      &:not(:last-child) {
+        margin-bottom: 1.2rem;
+        @include respond-to($l) {
+          margin-bottom: 0.8rem;
+        }
+      }
+      span {
+        display: flex;
+        align-items: center;
+      }
+      svg {
+        width: 2rem;
+        height: auto;
+        flex-shrink: 0;
+        margin-right: 0.6rem;
+        @include respond-to($l) {
+          margin-right: 0.4rem;
+        }
+        @include respond-to($pb) {
+          width: 1.6rem;
+        }
+      }
+    }
+    &__variants {
+      width: 5rem;
+      margin-left: 0.6rem;
+    }
+  }
+}

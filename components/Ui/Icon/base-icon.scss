@@ -1,0 +1,11 @@
+.nuxt-icon {
+  margin-bottom: 0;
+  vertical-align: initial;
+}
+
+.base-icon {
+  &__error {
+    color: red;
+    font-size: 1.2rem;
+  }
+}

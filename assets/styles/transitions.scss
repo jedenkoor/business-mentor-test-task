@@ -1,0 +1,27 @@
+.fade {
+  &-enter-active,
+  &-leave-active {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+  }
+}
+
+.slideDown {
+  &-enter-active,
+  &-leave-active {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+}
